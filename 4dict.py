@@ -18,3 +18,9 @@ print(len(student))
 print(student.keys())
 print(student.values())
 print(student.items())
+
+for key in student:
+    print(key)
+
+for key,val in student.items():
+    print(key, val)
