@@ -67,7 +67,7 @@ condition2 = None
 condition3 = 0
 condition4 = ''
 condition5 = {}
-# All above is False
+# All above is False. To check:
 if condition5:
     print('True')
 else:
