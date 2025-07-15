@@ -1,3 +1,5 @@
+from pprint import pprint
+
 fruits = ['Apple', 'Banana', 'Mango']
 fruits2 = ['DragonFruit', 'Strawberry']
 print(fruits)
@@ -63,7 +65,7 @@ fruitssets = {'Apple', 'Banana', 'Mango'} #random order
 print(fruitssets) #build multiple sets to see
 cs={'History', 'Math', 'Physics', 'Compsci'}
 art={'History', 'Math', 'Art', 'Design'}
-print(cs.union(art))
+pprint(cs.union(art))
 print(cs.intersection(art))
 print(cs.difference(art))
 
