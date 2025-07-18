@@ -1,16 +1,19 @@
+# filepath: /home/nirashanichang/Desktop/Python Projects/Learnings/8importmodules.py
+# Demonstrates importing modules and using their functions
+
 import calendar
 import datetime
 import math
 import os
 import random
-import sys  # where python looks for modules
+import sys  # System-specific parameters and functions
 
-import antigravity
+import antigravity  # Fun Easter egg module
 import mymodule as mm
-from mymodule import *  # to import everything, not good
-from mymodule import find_index  # to import function itself
+from mymodule import *           # Import all (not recommended)
+from mymodule import find_index  # Import specific function
 
-# sys.path.append('/home/nirashanichang/Desktop/Python Projects/Learnings/modules/')
+# sys.path.append('/path/to/modules/')  # Add custom module path
 
 courses = ['Art', 'Nepali', 'English', 'Maths', 'CompSci']
 
@@ -19,7 +22,7 @@ print(index)
 index1 = find_index(courses, 'Art')
 print(index1)
 
-print(sys.path)
+print(sys.path)  # List of module search paths
 
 random_course = random.choice(courses)
 print(random_course)
@@ -31,7 +34,7 @@ print(math.sin(rads))
 today = datetime.date.today()
 print(today)
 
-print(calendar.isleap(2020))
+print(calendar.isleap(2020))  # Check for leap year
 
-print(os.getcwd()) #current working directory
-print(os.__file__)
+print(os.getcwd())  # Current working directory
+print(os.__file__)  # Location of os module

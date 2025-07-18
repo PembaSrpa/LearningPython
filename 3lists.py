@@ -1,80 +1,79 @@
 from pprint import pprint
 
+# List operations
 fruits = ['Apple', 'Banana', 'Mango']
 fruits2 = ['DragonFruit', 'Strawberry']
 print(fruits)
-print(len(fruits))
-print(fruits[0])
-print(fruits[-1])
-print(fruits[0:2]) #all the way up to 2 but not including 2
-print(fruits[:2]) #same
+print(len(fruits))         # Length of list
+print(fruits[0])           # First element
+print(fruits[-1])          # Last element
+print(fruits[0:2])         # Slicing
+print(fruits[:2])
 
-fruits.append('Orange')
+fruits.append('Orange')    # Add to end
 print(fruits)
-fruits.insert(0, 'Pineapple')
+fruits.insert(0, 'Pineapple')  # Insert at index
 print(fruits)
-# fruits.insert(0, fruits2)
-# print(fruits) Not good [[''],'','']
-fruits.extend(fruits2)
+# fruits.insert(0, fruits2) # Would nest the list
+# print(fruits)
+fruits.extend(fruits2)     # Extend with another list
 print(fruits)
 
-fruits.remove('Banana')
-fruits.pop() #removes last value
+fruits.remove('Banana')    # Remove by value
+fruits.pop()               # Remove last item
 print(fruits)
-popped=fruits.pop()
+popped = fruits.pop()      # Remove and return last item
 print(popped)
 
-fruits.reverse()
+fruits.reverse()           # Reverse list
 print(fruits)
 
-nums = [1,4,5,7,2,3,0]
-nums.sort()
+nums = [1, 4, 5, 7, 2, 3, 0]
+nums.sort()                # Sort list
 print(nums)
 
-fruits.sort()
+fruits.sort()              # Sort alphabetically
 print(fruits)
 
-nums.sort(reverse=True)
+nums.sort(reverse=True)    # Sort descending
 print(nums)
 
-#without altering the original
-a= sorted(nums)
+# Sorted returns a new list
+a = sorted(nums)
 print(a)
 
-print(fruits.index('Mango'))
-print('Apple' in fruits)
+print(fruits.index('Mango'))    # Find index
+print('Apple' in fruits)        # Membership test
 
+# Looping through lists
 for item in fruits:
     print(item)
 for item in enumerate(fruits, start=1):
     print(item)
 
+# String join and split
 fruits_str = ','.join(fruits)
 print(fruits_str)
-newlist= fruits_str.split(',')
+newlist = fruits_str.split(',')
 print(newlist)
 
-#lists = mutable  tuple=immutable
-# use tuple when you want dont want to modify
-
+# Tuples are immutable
 fruitstuple = ('Apple', 'Banana', 'Mango')
-#fruitstuple[0] = 'Strawberry'  cant modify causes error
+# fruitstuple[0] = 'Strawberry'  # Error: can't modify
 
-#sets
-fruitssets = {'Apple', 'Banana', 'Mango'} #random order
-print(fruitssets) #build multiple sets to see
-cs={'History', 'Math', 'Physics', 'Compsci'}
-art={'History', 'Math', 'Art', 'Design'}
-pprint(cs.union(art))
-print(cs.intersection(art))
-print(cs.difference(art))
+# Sets are unordered and unique
+fruitssets = {'Apple', 'Banana', 'Mango'}
+print(fruitssets)
+cs = {'History', 'Math', 'Physics', 'Compsci'}
+art = {'History', 'Math', 'Art', 'Design'}
+pprint(cs.union(art))           # Union of sets
+print(cs.intersection(art))     # Intersection
+print(cs.difference(art))       # Difference
 
-#Empty Lists
-empty_list=[]
-empty_list=list()
-#Empty Tuples
-empty_tuple=()
-empty_tuple=tuple()
-#Empty Sets
-empty_set={} #doesnt actually create empty set, it creates dictionary
-empty_set=list() #only way
+# Creating empty collections
+empty_list = []
+empty_list = list()
+empty_tuple = ()
+empty_tuple = tuple()
+empty_set = {}      # Actually creates a dictionary
+empty_set = set()   # Correct way to create empty set

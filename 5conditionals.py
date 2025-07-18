@@ -1,3 +1,5 @@
+# Demonstrates conditional statements and boolean logic
+
 lang = 'Python'
 if True:
     print("True")
@@ -18,13 +20,14 @@ if num >= 2:
 if num <= 2:
     print('2<=2')
 
+# if-elif-else structure
 if lang == 'Python':
     print('Python')
 elif lang == 'Java':
     print('Java')
 else:
     print('None')
-#python doesnt have switch.. elif is enough
+# Python doesn't have switch-case
 
 user = 'Admin'
 logged = True
@@ -43,31 +46,27 @@ if not inn:
 else:
     print('Logged In')
 
-a = [1,2,3]
-b = [1,2,3]
+# Identity and equality
+a = [1, 2, 3]
+b = [1, 2, 3]
 
-print(a == b)
-print(a is b) # False because id is different(different object in memory)
+print(a == b)        # True: values are equal
+print(a is b)        # False: different objects
 print(id(a))
 print(id(b))
 c = a
-print(a is c) #True because same object in memory
-print(id(a) == id(c)) #basically the same
+print(a is c)        # True: same object
+print(id(a) == id(c))
 print(id(a))
 print(id(c))
 
-#False Values:
-    # False
-    # None
-    # Zero of any numeric type
-    # Any empty sequence. Eg. '', {}, []
-    # Any empty mapping. Eg. {}
+# False values in Python:
+# False, None, 0, '', {}, [], set(), etc.
 condition1 = False
 condition2 = None
 condition3 = 0
 condition4 = ''
 condition5 = {}
-# All above is False. To check:
 if condition5:
     print('True')
 else:

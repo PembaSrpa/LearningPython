@@ -1,22 +1,25 @@
-#Arithmetic operations
+# Demonstrates numeric operations and type conversions
+
 num = 3.14
-print(type(num))
-print(3+2)
-print(3-2)
-print(3*2)
-print(3/2)
-print(3//2) #floor division
-print(3**2) #exponent
-print(3%2) #modulus
-print(3*(3+2))
+print(type(num))      # Print type of variable
+
+# Basic arithmetic operations
+print(3 + 2)
+print(3 - 2)
+print(3 * 2)
+print(3 / 2)
+print(3 // 2)         # Floor division
+print(3 ** 2)         # Exponentiation
+print(3 % 2)          # Modulus
+print(3 * (3 + 2))    # Parentheses for order
 
 # Order of Operations - PEDMAS
 
-print(abs(-19)) #absolute value
-print(round(3.14))
-print(round(3.15,1)) # 1  means first digit after the decimal
+print(abs(-19))       # Absolute value
+print(round(3.14))    # Round to nearest integer
+print(round(3.15, 1)) # Round to 1 decimal place
 
-#Comparisons
+# Comparison operators
 print(3 == 2)
 print(3 != 2)
 print(3 > 2)
@@ -24,8 +27,8 @@ print(3 < 2)
 print(3 >= 2)
 print(3 <= 2)
 
-#strings
+# String addition and type casting
 a = '10'
 b = '10'
-print(a + b) # to add these we need to cast
-print(int(a)+int(b))
+print(a + b)              # Concatenation
+print(int(a) + int(b))    # Numeric addition after casting
