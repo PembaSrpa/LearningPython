@@ -20,32 +20,32 @@
 #         current_text += text[len(current_text)]
 #         print(current_text)
 #///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-# import time
-
-# text = "Fok You!"
-# current_text = ""
-
-# while current_text != text:
-#     for char in (chr(i) for i in range(32, 127)):
-#         print(current_text + char)
-#         time.sleep(0.01)
-
-#         if char == text[len(current_text)]:
-#             current_text += char
-#             break
-#///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 import time
 
-text = "Duck You!"
-current_text = [""] * len(text)  # Empty placeholders
-index = len(text) - 1            # Start from the end
+text = "I like Coffee!"
+current_text = ""
 
-while index >= 0:
+while current_text != text:
     for char in (chr(i) for i in range(32, 127)):
-        current_text[index] = char
-        print("".join(current_text))
-        time.sleep(0.01)
+        print(current_text + char)
+        time.sleep(0.007)
 
-        if char == text[index]:
+        if char == text[len(current_text)]:
+            current_text += char
             break
-    index -= 1
+#///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# import time
+
+# text = "Rigaysh is Gay!"
+# current_text = [""] * len(text)  # Empty placeholders
+# index = len(text) - 1            # Start from the end
+
+# while index >= 0:
+#     for char in (chr(i) for i in range(32, 127)):
+#         current_text[index] = char
+#         print("".join(current_text))
+#         time.sleep(0.005)
+
+#         if char == text[index]:
+#             break
+#     index -= 1
