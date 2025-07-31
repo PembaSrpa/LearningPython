@@ -34,6 +34,21 @@ class Employee:
     @staticmethod
     def is_workday(day):
         return day.weekday() < 5  # 0-4 are weekdays
+    
+    def __repr__(self):
+        return f"Employee('{self.first}', '{self.last}', {self.pay})"
+    # Example usage of the Employee class
+    
+    def __str__(self):
+        return f"{self.fullname()} - {self.email} - {self.pay}"
+    # Example usage of the Employee class
+    
+    def __add__(self, other):
+        return self.pay + other.pay
+    
+    def __len__(self):
+        return len(self.fullname())
+
 
 # Create instances of Employee
 emp_1 = Employee('John', 'Doe', 50000)
@@ -134,3 +149,15 @@ print(isinstance(mgr_1, Developer))
 print(issubclass(Developer, Developer))
 print(issubclass(Manager, Employee))
 print(issubclass(Manager, Developer))
+
+print(emp_1)
+print(repr(emp_1))
+print(emp_1.__repr__())#same
+print(str(emp_1))
+
+print(int.__add__(1,2))
+print(str.__add__('a','b'))
+
+print(emp_1 + emp_2) # adds salary
+
+print(len(emp_1))
